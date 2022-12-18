@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="SDK.js"></script>
+</head>
+
+<body>
+    <button class="js-error">抛出js错误</button>
+    <button class="ps-error">抛出promise错误</button>
+    <button class="zy-error">抛出资源错误</button>
+    <button class="test">测试</button>
+</body>
+<script>
+
+
+    const body = document.querySelector('body')
+    const head = document.querySelector('head')
+    const jsBtn = document.querySelector('.js-error')
+    const zyBtn = document.querySelector('.zy-error')
+    const test = document.querySelector('.test')
+    const psBtn = document.querySelector('.ps-error')
+    jsBtn.addEventListener('click', () => {
+        console.log(a);
+    })
+
+    zyBtn.addEventListener('click', () => {
+        setTimeout(() => {
+            const img = document.createElement('img')
+            img.src = './a.png'
+            body.appendChild(img)
+        }, 200)
+        // const css = document.createElement('link')
+        // css.href = '1.css'
+        // head.appendChild(css)
+    })
+
+    psBtn.addEventListener('click', () => {
+        new Promise((resolve, reject) => {
+            console.log(ttt);
+            reject(1234)
+        })
+    })
+
+
+
+</script>
+<script src="1.js"></script>
+
+
+</html>
