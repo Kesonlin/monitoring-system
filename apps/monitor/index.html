@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .content {
+            width: 100%;
+            height: 800px;
+            word-wrap: break-word;
+            background-color: skyblue;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -13,6 +22,7 @@
     <button class="ps-error">抛出promise错误</button>
     <button class="zy-error">抛出资源错误</button>
     <button class="test">测试</button>
+    <!-- <div class="content"></div> -->
 </body>
 <script>
 
@@ -44,6 +54,10 @@
             reject(1234)
         })
     })
+
+
+    const content = document.querySelector('.content')
+    // content.innerHTML = '@'.repeat(8000)
 
 
 
